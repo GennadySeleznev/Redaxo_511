@@ -1,0 +1,674 @@
+<?php if ($this->ctype == '1' || ($this->ctype == '-1')) { 
+require rex_stream::factory('module/3/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php if (rex::isBackend()) { 
+
+print '<b>'.htmlentities(/* REX_VALUE[id=1 output=html] */ '<style type="text/css" media="all"> <!-- .rot	/*agl rulekind: base;*/ { color: #f00; } .gold	/*agl rulekind: base;*/ { color: #963; } .blau	/*agl rulekind: base;*/ { color: #0080FF; } .orange	/*agl rulekind: base;*/ { color: #FF9D08; } --></style>').'</b>';
+
+} else { 
+
+print /* REX_VALUE[id=1 output=html] */ '<style type="text/css" media="all"> <!-- .rot	/*agl rulekind: base;*/ { color: #f00; } .gold	/*agl rulekind: base;*/ { color: #963; } .blau	/*agl rulekind: base;*/ { color: #0080FF; } .orange	/*agl rulekind: base;*/ { color: #FF9D08; } --></style>';
+
+} ?>
+
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/3/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php if (rex::isBackend()) { 
+
+print '<b>'.htmlentities(/* REX_VALUE[id=1 output=html] */ '<div id="myCarousel" class="carousel slide">' . "\r\n" . '<ol class="carousel-indicators hidden">' . "\r\n\r\n" . '<li class="active" data-target="#myCarousel" data-slide-to="0"></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=1></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=2></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=3></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=4></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=5></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=6></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=7></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=8></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=9></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=10></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=11></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=12></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=13></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=14></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=15></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=16></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=17></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=18></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=19></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=20></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=21></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=22></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=23></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=24></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=25></li>      ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=26></li>      ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=27></li>      ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=28></li>      ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=29></li>      ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=30></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=31></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=32></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=33></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=34></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=35></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=36></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=37></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=38></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=39></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=40></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=41></li>     ' . "\r\n" . '  ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '  </ol>' . "\r\n" . ' ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '<div class="carousel-inner">' . "\r\n\r\n" . '      ' . "\r\n\r\n" . '<!--     Zeilen sortieren RAVASI HOME -->' . "\r\n" . '    ' . "\r\n" . '    <div class="item active"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_20_rav_printkataloge.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/downloads/online-catalogs.html"><img src="media/slides_new/slider_20_rav_web_update.jpg" alt=""></a></div>  ' . "\r\n" . '    <div class="item"><a href="/applications/tuning-aluraeder.html?detail=true&name=IMPALA"><img src="media/slides_new/slider_20_rav_adm_impala.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_advan_bmw.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="https://www.ravasicorse.ch/media/RAV_K1W_2020.pdf#page=58"><img src="media/slides_new/slider_20_rav_dlw_etabeta_laserwriting.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/products/sports-exhausts/supersprint.html"><img src="media/slides_new/slider_20_rav_supersprint.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_ace_aff09.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/ap-sportfahrwerke/overview.html"><img src="media/slides_new/slider_20_rav_ap_sportfahrwerke.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/products/sports-exhausts/fox-exhaust-systems.html"><img src="media/slides_new/slider_20_rav_fox_new_brand.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/autex-springs.html"><img src="media/slides_new/slider_20_rav_autex_springs.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/products/wheel-spacers/powertech-easy-fit-series-car-kits/powertech-easy-fit.html"><img src="media/slides_new/slider_20_rav_powertech_easyfit.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_ace_aff06_mustang.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/st-suspensions/st-individualization.html"><img src="media/slides_new/slider_20_rav_st_individual.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="https://www.ravasicorse.ch/media/rav_k1i_2020_v2.pdf#page=54"><img src="media/slides_new/slider_20_rav_kw_classic.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_inoxcar.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-exhausts/inoxcar-racing.html"><img src="media/slides_new/slider_19_news_inoxcar.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_supersprint_porsche.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/wheels/aftermarket-wheels/overview.html"><img src="media/slides_new/slider_19_news_aaa_dedicated.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/applications/tuning-aluraeder.html?detail=true&name=AFF09"><img src="media/slides_new/slider_19_news_ace_aff09.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_amg_gt.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/car-racing-parts/brakes/pagid-racing.html"><img src="media/slides_new/slider_19_news_pagid_racing.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_ace_aff02_bmw.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_frau_an_autotuere.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/racing-tyres/advan-yokohama.html"><img src="media/slides_new/slider_19_news_yokohama_advan.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/kw-suspensions/overview.html"><img src="media/slides_new/slider_19_news_kw.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_frau_hinter_steuer.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/wheels/tuning-wheels/advan-racing.html"><img src="media/slides_new/slider_19_news_advan_r6_fz-f2.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/wheels/tuning-wheels/wedssport.html"><img src="media/slides_new/slider_19_news_weds_1.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_ace_driven_nissan.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/car-racing-parts/overview.html"><img src="media/slides_new/slider_19_news_r_racing_parts.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/oehlins-coilovers.html"><img src="media/slides_new/slider_19_news_oehlins.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_lamborghini.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/applications/tuning-aluraeder.html?detail=true&name=DRIVEN"><img src="media/slides_new/slider_19_news_ace_driven_golf_gti.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_evocorse_wueste.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/wheels/racing-wheels/evocorse-classic.html"><img src="media/slides_new/slider_19_news_evocorse_classic.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/racing-protective-wear/fia-helmets/stilo.html"><img src="media/slides_new/slider_19_news_stilo.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/st-suspensions/overview.html"><img src="media/slides_new/slider_19_news_st.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/car-racing-parts/brakes/cl-brakes.html"><img src="media/slides_new/slider_19_news_cl_brakes.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_leon_hardiritt_chevlon.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/wheels/tuning-wheels/leon-hardiritt.html"><img src="media/slides_new/slider_19_news_leon_hardiritt.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_powertech_schnee.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/certificates.html"><img src="media/slides_new/slider_19_news_certificates_englisch.jpg" alt=""></a></div>    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n\r\n\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '      ' . "\r\n" . '<!--     Schluss alle -->' . "\r\n\r\n" . '  </div>' . "\r\n" . '  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>' . "\r\n" . '  <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>' . "\r\n" . '</div>').'</b>';
+
+} else { 
+
+print /* REX_VALUE[id=1 output=html] */ '<div id="myCarousel" class="carousel slide">' . "\r\n" . '<ol class="carousel-indicators hidden">' . "\r\n\r\n" . '<li class="active" data-target="#myCarousel" data-slide-to="0"></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=1></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=2></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=3></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=4></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=5></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=6></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=7></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=8></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=9></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=10></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=11></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=12></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=13></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=14></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=15></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=16></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=17></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=18></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=19></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=20></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=21></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=22></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=23></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=24></li>' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=25></li>      ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=26></li>      ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=27></li>      ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=28></li>      ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=29></li>      ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=30></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=31></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=32></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=33></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=34></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=35></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=36></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=37></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=38></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=39></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=40></li>     ' . "\r\n" . '        <li data-target="#myCarousel" data-slide-to=41></li>     ' . "\r\n" . '  ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '  </ol>' . "\r\n" . ' ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '<div class="carousel-inner">' . "\r\n\r\n" . '      ' . "\r\n\r\n" . '<!--     Zeilen sortieren RAVASI HOME -->' . "\r\n" . '    ' . "\r\n" . '    <div class="item active"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_20_rav_printkataloge.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/downloads/online-catalogs.html"><img src="media/slides_new/slider_20_rav_web_update.jpg" alt=""></a></div>  ' . "\r\n" . '    <div class="item"><a href="/applications/tuning-aluraeder.html?detail=true&name=IMPALA"><img src="media/slides_new/slider_20_rav_adm_impala.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_advan_bmw.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="https://www.ravasicorse.ch/media/RAV_K1W_2020.pdf#page=58"><img src="media/slides_new/slider_20_rav_dlw_etabeta_laserwriting.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/products/sports-exhausts/supersprint.html"><img src="media/slides_new/slider_20_rav_supersprint.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_ace_aff09.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/ap-sportfahrwerke/overview.html"><img src="media/slides_new/slider_20_rav_ap_sportfahrwerke.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/products/sports-exhausts/fox-exhaust-systems.html"><img src="media/slides_new/slider_20_rav_fox_new_brand.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/autex-springs.html"><img src="media/slides_new/slider_20_rav_autex_springs.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/products/wheel-spacers/powertech-easy-fit-series-car-kits/powertech-easy-fit.html"><img src="media/slides_new/slider_20_rav_powertech_easyfit.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_ace_aff06_mustang.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/st-suspensions/st-individualization.html"><img src="media/slides_new/slider_20_rav_st_individual.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="https://www.ravasicorse.ch/media/rav_k1i_2020_v2.pdf#page=54"><img src="media/slides_new/slider_20_rav_kw_classic.jpg" alt=""></a></div> ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_inoxcar.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-exhausts/inoxcar-racing.html"><img src="media/slides_new/slider_19_news_inoxcar.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_supersprint_porsche.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/wheels/aftermarket-wheels/overview.html"><img src="media/slides_new/slider_19_news_aaa_dedicated.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/applications/tuning-aluraeder.html?detail=true&name=AFF09"><img src="media/slides_new/slider_19_news_ace_aff09.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_amg_gt.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/car-racing-parts/brakes/pagid-racing.html"><img src="media/slides_new/slider_19_news_pagid_racing.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_ace_aff02_bmw.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_frau_an_autotuere.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/racing-tyres/advan-yokohama.html"><img src="media/slides_new/slider_19_news_yokohama_advan.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/kw-suspensions/overview.html"><img src="media/slides_new/slider_19_news_kw.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_frau_hinter_steuer.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/wheels/tuning-wheels/advan-racing.html"><img src="media/slides_new/slider_19_news_advan_r6_fz-f2.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/wheels/tuning-wheels/wedssport.html"><img src="media/slides_new/slider_19_news_weds_1.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_ace_driven_nissan.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/car-racing-parts/overview.html"><img src="media/slides_new/slider_19_news_r_racing_parts.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/oehlins-coilovers.html"><img src="media/slides_new/slider_19_news_oehlins.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_lamborghini.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/applications/tuning-aluraeder.html?detail=true&name=DRIVEN"><img src="media/slides_new/slider_19_news_ace_driven_golf_gti.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_evocorse_wueste.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/wheels/racing-wheels/evocorse-classic.html"><img src="media/slides_new/slider_19_news_evocorse_classic.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/racing-protective-wear/fia-helmets/stilo.html"><img src="media/slides_new/slider_19_news_stilo.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/sports-suspensions/st-suspensions/overview.html"><img src="media/slides_new/slider_19_news_st.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/car-racing-parts/brakes/cl-brakes.html"><img src="media/slides_new/slider_19_news_cl_brakes.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_leon_hardiritt_chevlon.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/wheels/tuning-wheels/leon-hardiritt.html"><img src="media/slides_new/slider_19_news_leon_hardiritt.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/contact/contact-form.html"><img src="media/slides_new/slider_19_sw_kombi_rav_powertech_schnee.jpg" alt=""></a></div>    ' . "\r\n" . '    <div class="item"><a href="/products/certificates.html"><img src="media/slides_new/slider_19_news_certificates_englisch.jpg" alt=""></a></div>    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n\r\n\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '    ' . "\r\n" . '      ' . "\r\n" . '<!--     Schluss alle -->' . "\r\n\r\n" . '  </div>' . "\r\n" . '  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>' . "\r\n" . '  <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>' . "\r\n" . '</div>';
+
+} ?>
+
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/3/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php if (rex::isBackend()) { 
+
+print '<b>'.htmlentities(/* REX_VALUE[id=1 output=html] */ '<div class="hero-unit homehero">' . "\r\n" . '<div class="row">' . "\r\n" . '<div class="span9">').'</b>';
+
+} else { 
+
+print /* REX_VALUE[id=1 output=html] */ '<div class="hero-unit homehero">' . "\r\n" . '<div class="row">' . "\r\n" . '<div class="span9">';
+
+} ?>
+
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/26/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php 
+
+$qry = "select * from rex_article_slice where modultyp_id='35' and a356_is_online='1' and clang='".rex_clang::getCurrentId()."' order by value20 desc";
+$sql = new sql();
+$result = $sql->get_array($qry);
+
+
+//Slider Nav ausgeben
+?>
+
+<div id="myCarouselNews" class="carousel slide">
+<h3 class="carousel-header">News</h3><br />
+	  <p class="carousel-header pull-right news_navi"><a class="left carousel-control" href="#myCarouselNews" data-slide="prev">&lsaquo;</a><a class="right carousel-control" href="#myCarouselNews" data-slide="next">&rsaquo;</a></p>
+	<ol class="carousel-indicators hidden">
+
+<?php
+
+$i = 0;
+foreach($result as $row)
+{		
+  
+		if($i == 0) {
+			print '<li class="active" data-target="#myCarouselNews" data-slide-to="'.$i.'"></li>';
+		} else {
+			print '<li data-target="#myCarouselNews" data-slide-to="'.$i.'"></li>';
+		}	
+	$i++;
+}
+
+?>      
+
+  </ol>
+  <div class="carousel-inner">
+  
+<?php
+
+$i = 0;
+foreach($result as $row)
+{	
+
+		if($i == 0) {
+			print '<div class="item active"><div class="row-fluid">';
+		} else {
+			print '<div class="item"><div class="row-fluid">';
+		}
+	
+	
+			print '<div class="span12">';
+                        
+                            if ($row['value4'] != "") {
+                                print '<h4><a href="' . $row['value4'] . '">' . $row['value2'] . '</a></h4>';
+                            } else {
+                                print '<h4>' . $row['value2'] . '</h4>';
+                            }
+
+ 
+			$bild = rex_media::get($row['file1']);
+			$bildname = $bild->getFileName();
+			$bildtitel = $bild->getTitle();
+						
+						        print '<a class="popup" href="index.php?rex_media_type=image_lightbox&rex_media_file='.$bildname.'"><img class="newsbild" src="index.php?rex_media_type=image_products&rex_media_file='.$bildname.'" alt="'.$bildtitel.'"></a>';
+			
+			// Get Maintext
+			$wysiwigvalue = $row['value3'];
+			
+			if (trim($wysiwigvalue) <> '')
+			{
+			   $maintext = $wysiwigvalue;
+			}
+                        
+                        
+                         $textparts = explode('###readmore###', $maintext);
+
+    print $textparts[0];
+                        
+                        
+			
+                
+                           
+                           $imgvalue = $row['filelist6'];
+                           $fulltext = $row['value5'];
+                           $link_id = $row['article_id'];
+                           $news_id = $row['id'];
+                           $fulllink = rex_getUrl($link_id).'#'.$news_id;
+                        
+                           
+                           
+                            if ($imgvalue != "" || $fulltext != "") {
+                           
+                            print '<br><a href="'.$fulllink.'">read more</a>';
+                            
+                            }
+                        
+		
+			print '<h6>Date: '.$row['value1'].'</h6>';
+                        
+                      
+			
+			print '</div>';
+
+		print '</div></div>';
+	
+	$i++;
+}
+
+?>   
+
+  </div>
+
+
+</div>
+
+
+
+
+
+   
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/3/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php if (rex::isBackend()) { 
+
+print '<b>'.htmlentities(/* REX_VALUE[id=1 output=html] */ '</div><div class="span2 pull-right">' . "\r\n" . '<h3></h3>').'</b>';
+
+} else { 
+
+print /* REX_VALUE[id=1 output=html] */ '</div><div class="span2 pull-right">' . "\r\n" . '<h3></h3>';
+
+} ?>
+
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/1/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php
+
+$files = "";
+if (/* REX_MEDIALIST[1] */ 'banner_2019_neu_supersprint_340x170_1.jpg,banner_2018_rav_rennsport_i.jpg' != "") {
+	$files = /* REX_MEDIALIST[1] */ 'banner_2019_neu_supersprint_340x170_1.jpg,banner_2018_rav_rennsport_i.jpg';
+
+?>
+
+<div id="myCarouselWerbung1" class="carousel fade">
+	<ol class="carousel-indicators hidden">
+
+<?php   			 
+	if($files != "") {       
+		$files2 = explode(",",$files);       
+		$i = 0;
+		
+		foreach ($files2 as $file)
+		{
+			if ($i == 0)  { 				
+				print '<li class="active" data-target="#myCarousel3" data-slide-to="0"></li>';             
+			} else {					
+				print '<li data-target="#myCarousel3" data-slide-to='.$i.'></li>';           
+			}
+				$i = $i+1;
+		}
+	}			
+?>           
+  </ol>
+  <div class="carousel-inner">
+<?php      
+	if($files != "") {    
+		$files2 = explode(",",$files);
+		
+		$i = 0;
+		
+		foreach ($files2 as $file)
+		{
+			$bild = rex_media::get($file);
+			$bildname = $bild->getFileName();
+			$bildtitel = $bild->getTitle();
+			$bildbeschreibung = $bild->getValue('description');
+			$bildlink = $bild->getValue("med_link");
+                        $externbildlink = $bild->getValue("med_externlink");
+			$textbutton = $bild->getValue("med_buttontext");			
+			if ($i == 0)  { 				
+				print '<div class="item active ">';
+				$i = 1;
+			} else {					
+				print '<div class="item">';
+			}
+                        if ($externbildlink != "") { ?><a target="blank" href="<?php echo $externbildlink;?>">
+                            
+                        <?php } 
+			
+			else if ($bildlink != "") { ?><a href="<?php echo rex_getUrl($bildlink); if (rex_clang::getCurrentId() != 0) echo '?clang='.rex_clang::getCurrentId();?>">
+                       
+                        
+                        <?php
+                        }
+			print '<img src="index.php?rex_media_type=image_slider&rex_media_file='.$bildname.'" alt="'.$bildtitel.'">';
+                        
+                        
+                        
+                        if ($externbildlink != "" || $bildlink != "") print '</a>';
+			
+			
+			print '</div>';
+		}
+	} 
+    ?>    
+
+  </div>
+  <a class="left carousel-control hidden" href="#myCarousel3" data-slide="prev">&lsaquo;</a>
+  <a class="right carousel-control hidden" href="#myCarousel3" data-slide="next">&rsaquo;</a>
+</div>
+
+<?php
+
+} else {
+print 'Bitte füllen Sie alle erforderlichen Felder aus.';
+}
+
+?>
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/23/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php
+
+$files = "";
+if (/* REX_MEDIALIST[1] */ 'banner_2019_sabelt_340x170.jpg,banner_2019_sabelt_stilo_340x170_1.jpg' != "") {
+	$files = /* REX_MEDIALIST[1] */ 'banner_2019_sabelt_340x170.jpg,banner_2019_sabelt_stilo_340x170_1.jpg';
+
+?>
+
+<div id="myCarouselWerbung2" class="carousel fade">
+	<ol class="carousel-indicators hidden">
+
+<?php   			 
+	if($files != "") {       
+		$files2 = explode(",",$files);       
+		$i = 0;
+		
+		foreach ($files2 as $file)
+		{
+			if ($i == 0)  { 				
+				print '<li class="active" data-target="#myCarousel4" data-slide-to="0"></li>';             
+			} else {					
+				print '<li data-target="#myCarousel4" data-slide-to='.$i.'></li>';           
+			}
+				$i = $i+1;
+		}
+	}			
+?>           
+  </ol>
+ <div class="carousel-inner">
+<?php      
+	if($files != "") {    
+		$files2 = explode(",",$files);
+		
+		$i = 0;
+		
+		foreach ($files2 as $file)
+		{
+			$bild = rex_media::get($file);
+			$bildname = $bild->getFileName();
+			$bildtitel = $bild->getTitle();
+			$bildbeschreibung = $bild->getValue('description');
+			$bildlink = $bild->getValue("med_link");
+                        $externbildlink = $bild->getValue("med_externlink");
+			$textbutton = $bild->getValue("med_buttontext");			
+			if ($i == 0)  { 				
+				print '<div class="item active ">';
+				$i = 1;
+			} else {					
+				print '<div class="item">';
+			}
+                        if ($externbildlink != "") { ?><a target="blank" href="<?php echo $externbildlink;?>">
+                            
+                        <?php } 
+			
+			else if ($bildlink != "") { ?><a href="<?php echo rex_getUrl($bildlink); if (rex_clang::getCurrentId() != 0) echo '?clang='.rex_clang::getCurrentId();?>">
+                       
+                        
+                        <?php
+                        }
+			print '<img src="index.php?rex_media_type=image_slider&rex_media_file='.$bildname.'" alt="'.$bildtitel.'">';
+                        
+                        
+                        
+                        if ($externbildlink != "" || $bildlink != "") print '</a>';
+			
+			
+			print '</div>';
+		}
+	} 
+    ?>    
+
+  </div>
+  <a class="left carousel-control hidden" href="#myCarousel4" data-slide="prev">&lsaquo;</a>
+  <a class="right carousel-control hidden" href="#myCarousel4" data-slide="next">&rsaquo;</a>
+</div>
+
+<?php
+
+} else {
+print 'Bitte füllen Sie alle erforderlichen Felder aus.';
+}
+
+?>
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/24/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php
+
+$files = "";
+if (/* REX_MEDIALIST[1] */ 'banner_2020_product_selection_340x170.jpg,banner_2020_powertech_easy_fit_340x170.jpg' != "") {
+	$files = /* REX_MEDIALIST[1] */ 'banner_2020_product_selection_340x170.jpg,banner_2020_powertech_easy_fit_340x170.jpg';
+
+?>
+
+<div id="myCarouselWerbung3" class="carousel fade">
+	<ol class="carousel-indicators hidden">
+
+<?php   			 
+	if($files != "") {       
+		$files2 = explode(",",$files);       
+		$i = 0;
+		
+		foreach ($files2 as $file)
+		{
+			if ($i == 0)  { 				
+				print '<li class="active" data-target="#myCarousel5" data-slide-to="0"></li>';             
+			} else {					
+				print '<li data-target="#myCarousel5" data-slide-to='.$i.'></li>';           
+			}
+				$i = $i+1;
+		}
+	}			
+?>           
+  </ol>
+  <div class="carousel-inner">
+<?php      
+	if($files != "") {    
+		$files2 = explode(",",$files);
+		
+		$i = 0;
+		
+		foreach ($files2 as $file)
+		{
+			$bild = rex_media::get($file);
+			$bildname = $bild->getFileName();
+			$bildtitel = $bild->getTitle();
+			$bildbeschreibung = $bild->getValue('description');
+			$bildlink = $bild->getValue("med_link");
+                        $externbildlink = $bild->getValue("med_externlink");
+			$textbutton = $bild->getValue("med_buttontext");			
+			if ($i == 0)  { 				
+				print '<div class="item active ">';
+				$i = 1;
+			} else {					
+				print '<div class="item">';
+			}
+                        if ($externbildlink != "") { ?><a target="blank" href="<?php echo $externbildlink;?>">
+                            
+                        <?php } 
+			
+			else if ($bildlink != "") { ?><a href="<?php echo rex_getUrl($bildlink); if (rex_clang::getCurrentId() != 0) echo '?clang='.rex_clang::getCurrentId();?>">
+                       
+                        
+                        <?php
+                        }
+			print '<img src="index.php?rex_media_type=image_slider&rex_media_file='.$bildname.'" alt="'.$bildtitel.'">';
+                        
+                        
+                        
+                        if ($externbildlink != "" || $bildlink != "") print '</a>';
+			
+			
+			print '</div>';
+		}
+	} 
+    ?>    
+
+  </div>
+  <a class="left carousel-control hidden" href="#myCarousel5" data-slide="prev">&lsaquo;</a>
+  <a class="right carousel-control hidden" href="#myCarousel5" data-slide="next">&rsaquo;</a>
+</div>
+
+<?php
+
+} else {
+print 'Bitte füllen Sie alle erforderlichen Felder aus.';
+}
+
+?>
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/3/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php if (rex::isBackend()) { 
+
+print '<b>'.htmlentities(/* REX_VALUE[id=1 output=html] */ '</div></div></div>' . "\r\n" . '<div class="row">' . "\r\n" . '<div class="span4 text-center">').'</b>';
+
+} else { 
+
+print /* REX_VALUE[id=1 output=html] */ '</div></div></div>' . "\r\n" . '<div class="row">' . "\r\n" . '<div class="span4 text-center">';
+
+} ?>
+
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/38/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php if (/* REX_MEDIA[id=1] */ 'rav_banner_produkteuebersicht_1.png'!="" && /* REX_VALUE[id=1 isset=1] */ true && (/* REX_LINK[id=1 output=url output=id] */ '72'!="" || /* REX_VALUE[id=2 isset=1] */ false))
+
+{
+
+  	$bild = rex_media::get(/* REX_MEDIA[id=1] */ 'rav_banner_produkteuebersicht_1.png');
+	$bildname = $bild->getFileName();
+	$bildtitel = $bild->getTitle();
+    if(/* REX_VALUE[id=2 isset=1] */ false) {
+        $url = /* REX_VALUE[2] */ '';   
+    } else if (/* REX_LINK[id=1 output=url output=id] */ '72'!="") {
+        $url = rex_getUrl(/* REX_LINK[id=1 output=url output=id] */ '72', rex_clang::getCurrentId());
+    } else {
+        $url = "";
+    }
+	
+	?>
+    <div class="oneimage ">
+     <?php      
+	 			print '<a href="'.$url.'">';       
+                print '<img src="index.php?rex_media_type=image_productsbig&rex_media_file='.$bildname.'" alt="'.$bildtitel.'"></a>';
+				print '<div><h1>' . /* REX_VALUE[1] */ 'Prodotti (Panoramica)' . '</h1></div>'; 
+	?> 
+    </div> 
+<?php
+} else {
+print 'Bitte füllen Sie alle erforderlichen Felder aus.';
+}  
+
+?>
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/2/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php
+
+if (/* REX_VALUE[id=1 isset=1] */ true)
+{
+
+	// Get Maintext
+	$wysiwigvalue = rex_var::nothing(/* REX_VALUE[id=1 output=html] */ $__rex_var_content_1 = '<p>Nella nostra vasta gamma siete sicuri di trovare il giusto prodotto...</p>') . <<< EOT
+{$__rex_var_content_1}
+EOT;
+	
+	if (trim($wysiwigvalue) <> '')
+	{
+	   $maintext = $wysiwigvalue;
+	}
+	
+	print $maintext;
+
+} else {
+	print 'Bitte füllen Sie alle erforderlichen Felder aus.';
+}  
+
+?>
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/3/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php if (rex::isBackend()) { 
+
+print '<b>'.htmlentities(/* REX_VALUE[id=1 output=html] */ '</div>' . "\r\n" . '<div class="span4 text-center">' . "\r\n" . '').'</b>';
+
+} else { 
+
+print /* REX_VALUE[id=1 output=html] */ '</div>' . "\r\n" . '<div class="span4 text-center">' . "\r\n" . '';
+
+} ?>
+
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/38/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php if (/* REX_MEDIA[id=1] */ 'rav_banner_onlinekataloge_2020.png'!="" && /* REX_VALUE[id=1 isset=1] */ true && (/* REX_LINK[id=1 output=url output=id] */ '201'!="" || /* REX_VALUE[id=2 isset=1] */ false))
+
+{
+
+  	$bild = rex_media::get(/* REX_MEDIA[id=1] */ 'rav_banner_onlinekataloge_2020.png');
+	$bildname = $bild->getFileName();
+	$bildtitel = $bild->getTitle();
+    if(/* REX_VALUE[id=2 isset=1] */ false) {
+        $url = /* REX_VALUE[2] */ '';   
+    } else if (/* REX_LINK[id=1 output=url output=id] */ '201'!="") {
+        $url = rex_getUrl(/* REX_LINK[id=1 output=url output=id] */ '201', rex_clang::getCurrentId());
+    } else {
+        $url = "";
+    }
+	
+	?>
+    <div class="oneimage ">
+     <?php      
+	 			print '<a href="'.$url.'">';       
+                print '<img src="index.php?rex_media_type=image_productsbig&rex_media_file='.$bildname.'" alt="'.$bildtitel.'"></a>';
+				print '<div><h1>' . /* REX_VALUE[1] */ 'Catalogo online' . '</h1></div>'; 
+	?> 
+    </div> 
+<?php
+} else {
+print 'Bitte füllen Sie alle erforderlichen Felder aus.';
+}  
+
+?>
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/2/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php
+
+if (/* REX_VALUE[id=1 isset=1] */ true)
+{
+
+	// Get Maintext
+	$wysiwigvalue = rex_var::nothing(/* REX_VALUE[id=1 output=html] */ $__rex_var_content_1 = '<p>Cataloghi ora anche in versione online con ancora pi&ugrave; informazioni e immagini!</p>') . <<< EOT
+{$__rex_var_content_1}
+EOT;
+	
+	if (trim($wysiwigvalue) <> '')
+	{
+	   $maintext = $wysiwigvalue;
+	}
+	
+	print $maintext;
+
+} else {
+	print 'Bitte füllen Sie alle erforderlichen Felder aus.';
+}  
+
+?>
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/3/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php if (rex::isBackend()) { 
+
+print '<b>'.htmlentities(/* REX_VALUE[id=1 output=html] */ '</div><div class="span4 text-center">' . "\r\n" . '').'</b>';
+
+} else { 
+
+print /* REX_VALUE[id=1 output=html] */ '</div><div class="span4 text-center">' . "\r\n" . '';
+
+} ?>
+
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/38/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php if (/* REX_MEDIA[id=1] */ 'rav_banner_fzanwendungen_1.png'!="" && /* REX_VALUE[id=1 isset=1] */ true && (/* REX_LINK[id=1 output=url output=id] */ '227'!="" || /* REX_VALUE[id=2 isset=1] */ false))
+
+{
+
+  	$bild = rex_media::get(/* REX_MEDIA[id=1] */ 'rav_banner_fzanwendungen_1.png');
+	$bildname = $bild->getFileName();
+	$bildtitel = $bild->getTitle();
+    if(/* REX_VALUE[id=2 isset=1] */ false) {
+        $url = /* REX_VALUE[2] */ '';   
+    } else if (/* REX_LINK[id=1 output=url output=id] */ '227'!="") {
+        $url = rex_getUrl(/* REX_LINK[id=1 output=url output=id] */ '227', rex_clang::getCurrentId());
+    } else {
+        $url = "";
+    }
+	
+	?>
+    <div class="oneimage ">
+     <?php      
+	 			print '<a href="'.$url.'">';       
+                print '<img src="index.php?rex_media_type=image_productsbig&rex_media_file='.$bildname.'" alt="'.$bildtitel.'"></a>';
+				print '<div><h1>' . /* REX_VALUE[1] */ 'Applicazioni per veicoli' . '</h1></div>'; 
+	?> 
+    </div> 
+<?php
+} else {
+print 'Bitte füllen Sie alle erforderlichen Felder aus.';
+}  
+
+?>
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/2/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php
+
+if (/* REX_VALUE[id=1 isset=1] */ true)
+{
+
+	// Get Maintext
+	$wysiwigvalue = rex_var::nothing(/* REX_VALUE[id=1 output=html] */ $__rex_var_content_1 = '<p>Trovate un corretto prodotto tuning per la vostra auto.</p>') . <<< EOT
+{$__rex_var_content_1}
+EOT;
+	
+	if (trim($wysiwigvalue) <> '')
+	{
+	   $maintext = $wysiwigvalue;
+	}
+	
+	print $maintext;
+
+} else {
+	print 'Bitte füllen Sie alle erforderlichen Felder aus.';
+}  
+
+?>
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+require rex_stream::factory('module/3/output', 
+<<<'EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878'
+<?php if (rex::isBackend()) { 
+
+print '<b>'.htmlentities(/* REX_VALUE[id=1 output=html] */ '</div>' . "\r\n" . '</div>').'</b>';
+
+} else { 
+
+print /* REX_VALUE[id=1 output=html] */ '</div>' . "\r\n" . '</div>';
+
+} ?>
+
+EOD_C95EB678CC2C52AC9B28C28FECC761A6FEAC2878
+);
+
+ } ?>

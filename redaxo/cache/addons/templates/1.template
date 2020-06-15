@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<?php
+
+//error_reporting(E_ALL);
+
+//	Code
+////////////////////////////////////////////////////////////////////////////////
+
+if(rex_addon::get('rexseo')->isAvailable())
+{
+  $meta = new rexseo_meta();
+  $meta_description   = $meta->get_description();
+  $meta_keywords      = $meta->get_keywords();
+  $meta_title         = $meta->get_title();
+  $meta_canonical     = $meta->get_canonical();
+  $meta_base          = $meta->get_base();
+}
+else
+{
+  $OOStartArticle     = rex_article::get(rex_article::getSiteStartArticleId(), rex_clang::getCurrentId());
+  $meta_description   = $OOStartArticle->getValue("art_description");
+  $meta_keywords      = $OOStartArticle->getValue("art_keywords");
+
+  if($this->getValue("art_description") != "")
+	$meta_description = htmlspecialchars($this->getValue("art_description"));
+  if($this->getValue("art_keywords") != "")
+	$meta_keywords    = htmlspecialchars($this->getValue("art_keywords"));
+
+  $meta_title         = rex::getServerName().' | '.$this->getValue("name");
+  $meta_canonical     = isset($_REQUEST['REQUEST_URI']) ? $_REQUEST['REQUEST_URI'] : '';
+  $meta_base          = rex::getServer();
+}
+
+// HTML BEGIN
+?>
+
+<!--[if IE 7 ]><html class="ie ie7" lang="de"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="de"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="de" class="ie ie9"> <!--<![endif]-->
+
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149037440-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149037440-3');
+</script>
+
+	<base href="<?php echo $meta_base; ?>" />
+	<title><?php echo $meta_title; ?></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="<?php echo $meta_keywords; ?>" />
+	<meta name="description" content="<?php echo $meta_description; ?>" />
+	<link rel="canonical" href="<?php echo $meta_canonical; ?>" />
+
+	<?php if("REX_ARTICLE_ID" != 6) { //ID des Blogartikels ?>
+    <meta property="og:title" content="<?php echo $meta_title; ?>" />
+    <meta property="og:type" content="company" />
+    <meta property="og:url" content="<?php echo $meta_canonical; ?>" />
+    <meta property="og:description" content="<?php echo $meta_description; ?>"/>
+    <?php } ?>
+    <meta property="og:site_name" content="<?php print rex::getServerName() ?>" />
+    <meta property="fb:admins" content="1501064632" />
+
+	<link rel="shortcut icon" href="<?php echo rex::getServer() ?>media/ico/favicon.ico">
+	<link rel="icon" href="<?php echo rex::getServer() ?>media/ico/favicon.ico" type="image/ico">
+
+    <!-- For mobile devices -->
+ 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo rex::getServer() ?>media/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo rex::getServer() ?>media/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo rex::getServer() ?>media/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo rex::getServer() ?>media/ico/apple-touch-icon-57-precomposed.png">
+
+
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link href="<?php echo rex::getServer() ?>media/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo rex::getServer() ?>media/css/main.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo rex::getServer() ?>media/css/video-js.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo rex::getServer() ?>media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo rex::getServer() ?>media/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo rex::getServer() ?>media/css/custom.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo rex::getServer() ?>media/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<?php echo rex::getServer() ?>media/css/animate.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+	<link href='//fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+    <!-- Main Scripts-->
+    <script type="text/javascript" src="<?php echo rex::getServer() ?>media/js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo rex::getServer() ?>media/js/jquery.mobile.custom.min.js"></script>
+    <script type="text/javascript" src="<?php echo rex::getServer() ?>media/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo rex::getServer() ?>media/js/video.js"></script>
+    <script type="text/javascript" src="<?php echo rex::getServer() ?>media/js/responsive.video.js"></script>
+    <script type="text/javascript" src="<?php echo rex::getServer() ?>media/js/main.ui.js"></script>
+    <script type="text/javascript" src="<?php echo rex::getServer() ?>media/js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="<?php echo rex::getServer() ?>media/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="<?php echo rex::getServer() ?>media/js/bootstrap.validate.js"></script>
+	<script type="text/javascript" src="<?php echo rex::getServer() ?>media/js/bootstrap.validate.en.js"></script>
+
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+</head>
+
+<body class="<?php
+      if(rex_clang::getCurrentId() == "1") { print 'deutsch '; }
+      if(rex_clang::getCurrentId() == "2") { print 'francais '; }
+      ?>">
+
+	<div class="container">
+    	<!-- H E A D E R -->
+        <header class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+
+                <div class="headlinkcontainer">
+                    <a class="btn btn-info" href="https://www.facebook.com/pages/RAVASICORSE/263652226986775" title="Facebook"><i class="icon-facebook"></i></a>&nbsp;&nbsp;
+
+
+                    <a class="btn btn-info" href="https://www.instagram.com/ravasicorse/" title="Instagram"><i class="icon-instagram"></i></a>&nbsp;&nbsp;
+                    <a class="btn btn-info" href="https://www.linkedin.com/company/mario-ravasi-sa/" title="Linkedin"><i class="icon-linkedin"></i></a>&nbsp;&nbsp;
+
+
+                 <a class="headlinks" href="
+
+<?php if (rex_clang::getCurrentId() == "0") {
+    print '';
+} ?>
+<?php if (rex_clang::getCurrentId() == "1") {
+    print 'deutsch';
+} ?>
+<?php if (rex_clang::getCurrentId() == "2") {
+    print 'francais';
+} ?>
+
+/applications/anwendungsliste-asa-oe.html"><small>OE<strong>asa</strong> approval free wheels</small></a>&nbsp;&nbsp;·&nbsp;
+                    
+      
+<a class="headlinks" href="
+
+<?php if (rex_clang::getCurrentId() == "0") {
+    print '';
+} ?>
+<?php if (rex_clang::getCurrentId() == "1") {
+    print 'deutsch';
+} ?>
+<?php if (rex_clang::getCurrentId() == "2") {
+    print 'francais';
+} ?>
+/applications/tuning-wheels/all-wheels.html"><small>all wheels</small></a>&nbsp;&nbsp;·&nbsp;
+                    
+                    
+                    <a class="headlinks" href="
+
+<?php if (rex_clang::getCurrentId() == "0") {
+    print '';
+} ?>
+<?php if (rex_clang::getCurrentId() == "1") {
+    print 'deutsch';
+} ?>
+<?php if (rex_clang::getCurrentId() == "2") {
+    print 'francais';
+} ?>
+/applications/wheel-spacers/powertech-wheel-spacers.html"><small>wheel spacers</small></a>&nbsp;&nbsp;·&nbsp;
+                    
+                    
+                    <a class="headlinks" href="
+
+<?php if (rex_clang::getCurrentId() == "0") {
+    print '';
+} ?>
+<?php if (rex_clang::getCurrentId() == "1") {
+    print 'deutsch';
+} ?>
+<?php if (rex_clang::getCurrentId() == "2") {
+    print 'francais';
+} ?>
+/applications/suspension/applications.html"><small>sports suspensions</small></a>&nbsp;&nbsp;·&nbsp;
+                    
+                    
+                    <a class="headlinks" href="
+
+<?php if (rex_clang::getCurrentId() == "0") {
+    print '';
+} ?>
+<?php if (rex_clang::getCurrentId() == "1") {
+    print 'deutsch';
+} ?>
+<?php if (rex_clang::getCurrentId() == "2") {
+    print 'francais';
+} ?>
+/applications/sport-exhaust/applications.html"><small>sports exhausts</small></a>&nbsp;&nbsp;·&nbsp;
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+<a class="headlinks" href="
+
+<?php if (rex_clang::getCurrentId() == "0") {
+    print '';
+} ?>
+<?php if (rex_clang::getCurrentId() == "1") {
+    print 'deutsch';
+} ?>
+<?php if (rex_clang::getCurrentId() == "2") {
+    print 'francais';
+} ?>
+/motorsport.html"><small>motorsport</small></a>
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="top-links">
+
+                        <li id="sprachwahl">
+
+                            <div class="spracheinnen">
+                                <a id="it" class="spracheit text-center <?php if (rex_clang::getCurrentId() == "0") {
+    print 'current';
+} ?>" href="<?php print rex_getUrl(REX_ARTICLE_ID, 0); ?>">IT</a>
+                                <a id="de" class="sprachede text-center <?php if (rex_clang::getCurrentId() == "1") {
+    print 'current';
+} ?>" href="<?php print rex_getUrl(REX_ARTICLE_ID, 1); ?>">DE</a>
+                                <a id="fr" class="sprachefr text-center  <?php if (rex_clang::getCurrentId() == "2") {
+    print 'current';
+} ?>" href="<?php print rex_getUrl(REX_ARTICLE_ID, 2); ?>">FR</a>
+
+                            </div>
+
+                        </li>
+
+                        <a class="shoplink" href="
+
+<?php if (rex_clang::getCurrentId() == "0") {
+    print '';
+} ?>
+<?php if (rex_clang::getCurrentId() == "1") {
+    print 'deutsch';
+} ?>
+<?php if (rex_clang::getCurrentId() == "2") {
+    print 'francais';
+} ?>
+
+
+/shop.html" target=”_blank” title="Ravasi-Shop">
+                            <img src="<?php echo rex::getServer() ?>media/img/icon_shop.png" />
+                        </a>
+
+
+                  </div>
+              </div>
+
+
+
+
+              <a class="brand" href="<?php echo rex_path::frontend(); ?>index.php<?php if (rex_clang::getCurrentId() != 0) echo '?clang='.rex_clang::getCurrentId();?>"><img src="<?php echo rex::getServer() ?>media/img/logo.png" alt="<?php print rex::getServerName() ?>" class="display_default" width="372px" height="67px"/><img src="<?php echo rex::getServer() ?>media/img/logo_@2X.png" alt="<?php print rex::getServerName() ?>" class="display_retina" width="372px" height="67px"/></a>
+
+
+
+
+
+
+
+
+              <nav class="nav-collapse collapse navbar-responsive-collapse ">
+
+                   <div class="nav-content">
+
+<!-- 
+                            <div class="social-icons pull-right">
+                    <a class="btn btn-info" href="https://www.facebook.com/pages/RAVASICORSE/263652226986775" title="Facebook"><i class="icon-facebook icon-2x"></i></a>
+
+
+                    </div>
+                    
+  -->                   
+
+        		<?= /* REX_TEMPLATE[2] */ rex_var_template::getTemplateOutput(require rex_var_template::getTemplateStream(2, $this)), "\r\n" ?>
+
+                   </div>
+
+              </nav><!-- .nav-collapse -->
+
+
+            </div>
+          </div><!-- .navbar-inner -->
+        </header>
+
+        <!-- C O N T E N T -->
+        <?php echo $this->getArticle(); ?>
+
+
+
+        <!-- F O O T E R -->
+        <hr>
+        <?= /* REX_ARTICLE[15] */ rex_var_article::getArticle(15, -1, null), "\r\n" ?>
+
+
+
+
+
+        <hr>
+         <footer class="row">
+        <div id="facebookcount">
+                <iframe src="//www.facebook.com/plugins/like.php?locale=de_DE&amp;href=<?php echo urlencode(str_replace('https://', 'http://',rex::getServer())); ?>&amp;layout=button_count&amp;show_faces=false&amp;width=140&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowtransparency="true" style="border:none; overflow:hidden;"></iframe></div>
+        </footer>
+
+        <footer class="row muted">
+            <div class="span2">
+            	<p>&copy; <?php print date("Y"); ?> by <strong><?php print rex::getServerName() ?></strong></p>
+            </div>
+            <div class="span10">
+            	<!-- <?= /* REX_TEMPLATE[3] */ rex_var_template::getTemplateOutput(require rex_var_template::getTemplateStream(3, $this)) ?>  Fussnavigation entfernt-->
+
+
+            </div>
+
+<div style="text-align: right">
+
+
+<!-- MANUELLE FUSSNAVI -->
+
+    
+<?php if (rex_clang::getCurrentId() == "0") { ?>
+
+
+<a href="/products/wheels/overview.html"  style="color: darkgrey" >cerchi in lega</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheel-spacers/overview.html"  style="color: darkgrey" >distanziali</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/sports-suspensions/overview.html"  style="color: darkgrey" >sospensioni sportive</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/sports-exhausts/overview.html"  style="color: darkgrey" >scarico sportivo</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/car-racing-parts/overview.html"  style="color: darkgrey" >sport motoristici</a>
+<?php
+}
+?>
+
+<?php if (rex_clang::getCurrentId() == "1") { ?>
+<a href="/deutsch/products/wheels/overview.html"  style="color: darkgrey" >alufelgen</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheel-spacers/overview.html"  style="color: darkgrey" >spurverbreiterungen</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/sports-suspensions/overview.html"  style="color: darkgrey" >sportfahrwerke</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/sports-exhausts/overview.html"  style="color: darkgrey" >sportauspuff</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/car-racing-parts/overview.html"  style="color: darkgrey" >motorsport</a>
+<?php
+}
+?>
+
+<?php if (rex_clang::getCurrentId() == "2") { ?>
+<a href="/francais/products/wheels/overview.html"  style="color: darkgrey" >jantes alu</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheel-spacers/overview.html"  style="color: darkgrey" >entretoises de roue</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/sports-suspensions/overview.html"  style="color: darkgrey" >suspensions sport</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/sports-exhausts/overview.html"  style="color: darkgrey" >echappement sport</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/car-racing-parts/overview.html"  style="color: darkgrey" >sport automobile</a>
+<?php
+}
+?>
+
+<!-- ENDE MANUELLE FUSSNAVI -->
+
+</div>
+
+<br/>
+<!-- MANUELLE FUSS BRANDS -->
+
+<div style="text-align: center">
+
+<h5> 
+    
+<?php if (rex_clang::getCurrentId() == "0") { ?>
+
+<a href="/products/wheels/tuning-wheels/a1.html"  style="color: darkgrey" >A1</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/aftermarket-wheels/overview.html"  style="color: darkgrey" >AAA&nbsp;DEDICATED</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/tuning-wheels/ac.html"  style="color: darkgrey" >AC</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/tuning-wheels/ace-racing.html"  style="color: darkgrey" >ACE&nbsp;RACING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/tuning-wheels/adm.html"  style="color: darkgrey" >ADM</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/tuning-wheels/advan-racing.html"  style="color: darkgrey" >ADVAN&nbsp;RACING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/sports-suspensions/ap-sportfahrwerke/overview.html"  style="color: darkgrey" >AP&nbsp;SPORTFAHRWERKE</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/racing-wheels/arcasting.html"  style="color: darkgrey" >ARCASTING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/car-racing-parts/interior-exterior/atech.html"  style="color: darkgrey" >ATECH</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheel-parts/bimecc-wheel-parts.html"  style="color: darkgrey" >BIMECC</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/pit-lane/caseliner-pit-equipment.html"  style="color: darkgrey" >CASELINER</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/car-racing-parts/brakes/cl-brakes.html"  style="color: darkgrey" >CL&nbsp;BRAKES</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/car-racing-parts/brakes/ctf.html"  style="color: darkgrey" >C.T.F.</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/tuning-wheels/dlw.html"  style="color: darkgrey" >DLW</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/tuning-wheels/eta-beta.html"  style="color: darkgrey" >ETABETA</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/racing-wheels/evocorse.html"  style="color: darkgrey" >EVOCORSE</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/sports-exhausts/fox-exhaust-systems.html"  style="color: darkgrey" >FOX&nbsp;EXHAUST</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/tuning-wheels/gmp-italia.html"  style="color: darkgrey" >GMP&nbsp;ITALIA</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/sports-exhausts/inoxcar-racing.html"  style="color: darkgrey" >INOXCAR</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/sports-suspensions/kw-suspensions/overview.html"  style="color: darkgrey" >KW&nbsp;SUSPENSIONS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheel-parts/kics-2-pc-boltsnuts.html"  style="color: darkgrey" >KICS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/car-racing-parts/lighting/lazer.html"  style="color: darkgrey" >LAZER</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/tuning-wheels/leon-hardiritt.html"  style="color: darkgrey" >LEON&nbsp;HARDIRITT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/racing-protective-parts/steering-wheels/momo.html"  style="color: darkgrey" >MOMO</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/sports-suspensions/oehlins-coilovers.html"  style="color: darkgrey" >OEHLINS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/tuning-wheels/oz.html"  style="color: darkgrey" >O·Z&nbsp;RACING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/car-racing-parts/brakes/pagid-racing.html"  style="color: darkgrey" >PAGID</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/pit-lane/paoli-pitstop.html"  style="color: darkgrey" >PAOLI</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/sports-suspensions/powerflex.html"  style="color: darkgrey" >POWERFLEX</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheel-spacers/overview.html"  style="color: darkgrey" >POWERTECH</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/car-racing-parts/lighting/ring.html"  style="color: darkgrey" >RING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/car-racing-parts/interior-exterior/sabelt.html"  style="color: darkgrey" >SABELT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/car-racing-parts/cooling-system-technology/samco-sport.html"  style="color: darkgrey" >SAMCO</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/tuning-wheels/schmidt.html"  style="color: darkgrey" >SCHMIDT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/car-racing-parts/cooling-system-technology/sfs-performance.html"  style="color: darkgrey" >SFS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/sports-suspensions/st-suspensions/overview.html"  style="color: darkgrey" >ST&nbsp;SUSPENSIONS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/racing-protective-wear/fia-helmets/stilo.html"  style="color: darkgrey" >STILO</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/sports-exhausts/supersprint.html"  style="color: darkgrey" >SUPERSPRINT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/wheels/tuning-wheels/wedssport.html"  style="color: darkgrey" >WEDSSPORT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/racing-tyres/advan-yokohama.html"  style="color: darkgrey" >YOKOHAMA</a>&nbsp;&nbsp;·&nbsp;
+<a href="/products/car-racing-parts/transmissions.html"  style="color: darkgrey" >3MO PERFORMANCE</a>
+
+<?php
+}
+?>
+
+<?php if (rex_clang::getCurrentId() == "1") { ?>
+    
+<a href="/deutsch/products/wheels/tuning-wheels/a1.html"  style="color: darkgrey" >A1</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/aftermarket-wheels/overview.html"  style="color: darkgrey" >AAA&nbsp;DEDICATED</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/tuning-wheels/ac.html"  style="color: darkgrey" >AC</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/tuning-wheels/ace-racing.html"  style="color: darkgrey" >ACE&nbsp;RACING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/tuning-wheels/adm.html"  style="color: darkgrey" >ADM</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/tuning-wheels/advan-racing.html"  style="color: darkgrey" >ADVAN&nbsp;RACING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/sports-suspensions/ap-sportfahrwerke/overview.html"  style="color: darkgrey" >AP&nbsp;SPORTFAHRWERKE</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/racing-wheels/arcasting.html"  style="color: darkgrey" >ARCASTING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/car-racing-parts/interior-exterior/atech.html"  style="color: darkgrey" >ATECH</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheel-parts/bimecc-wheel-parts.html"  style="color: darkgrey" >BIMECC</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/pit-lane/caseliner-pit-equipment.html"  style="color: darkgrey" >CASELINER</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/car-racing-parts/brakes/cl-brakes.html"  style="color: darkgrey" >CL&nbsp;BRAKES</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/car-racing-parts/brakes/ctf.html"  style="color: darkgrey" >C.T.F.</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/tuning-wheels/dlw.html"  style="color: darkgrey" >DLW</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/tuning-wheels/eta-beta.html"  style="color: darkgrey" >ETABETA</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/racing-wheels/evocorse.html"  style="color: darkgrey" >EVOCORSE</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/sports-exhausts/fox-exhaust-systems.html"  style="color: darkgrey" >FOX&nbsp;EXHAUST</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/tuning-wheels/gmp-italia.html"  style="color: darkgrey" >GMP&nbsp;ITALIA</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/sports-exhausts/inoxcar-racing.html"  style="color: darkgrey" >INOXCAR</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/sports-suspensions/kw-suspensions/overview.html"  style="color: darkgrey" >KW&nbsp;SUSPENSIONS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheel-parts/kics-2-pc-boltsnuts.html"  style="color: darkgrey" >KICS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/car-racing-parts/lighting/lazer.html"  style="color: darkgrey" >LAZER</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/tuning-wheels/leon-hardiritt.html"  style="color: darkgrey" >LEON&nbsp;HARDIRITT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/racing-protective-parts/steering-wheels/momo.html"  style="color: darkgrey" >MOMO</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/sports-suspensions/oehlins-coilovers.html"  style="color: darkgrey" >OEHLINS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/tuning-wheels/oz.html"  style="color: darkgrey" >O·Z&nbsp;RACING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/car-racing-parts/brakes/pagid-racing.html"  style="color: darkgrey" >PAGID</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/pit-lane/paoli-pitstop.html"  style="color: darkgrey" >PAOLI</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/sports-suspensions/powerflex.html"  style="color: darkgrey" >POWERFLEX</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheel-spacers/overview.html"  style="color: darkgrey" >POWERTECH</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/car-racing-parts/lighting/ring.html"  style="color: darkgrey" >RING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/car-racing-parts/interior-exterior/sabelt.html"  style="color: darkgrey" >SABELT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/car-racing-parts/cooling-system-technology/samco-sport.html"  style="color: darkgrey" >SAMCO</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/tuning-wheels/schmidt.html"  style="color: darkgrey" >SCHMIDT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/car-racing-parts/cooling-system-technology/sfs-performance.html"  style="color: darkgrey" >SFS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/sports-suspensions/st-suspensions/overview.html"  style="color: darkgrey" >ST&nbsp;SUSPENSIONS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/racing-protective-wear/fia-helmets/stilo.html"  style="color: darkgrey" >STILO</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/sports-exhausts/supersprint.html"  style="color: darkgrey" >SUPERSPRINT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/wheels/tuning-wheels/wedssport.html"  style="color: darkgrey" >WEDSSPORT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/racing-tyres/advan-yokohama.html"  style="color: darkgrey" >YOKOHAMA</a>&nbsp;&nbsp;·&nbsp;
+<a href="/deutsch/products/car-racing-parts/transmissions.html"  style="color: darkgrey" >3MO PERFORMANCE</a>
+
+<?php
+}
+?>
+
+<?php if (rex_clang::getCurrentId() == "2") { ?>
+
+<a href="/francais/products/wheels/tuning-wheels/a1.html"  style="color: darkgrey" >A1</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/aftermarket-wheels/overview.html"  style="color: darkgrey" >AAA&nbsp;DEDICATED</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/tuning-wheels/ac.html"  style="color: darkgrey" >AC</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/tuning-wheels/ace-racing.html"  style="color: darkgrey" >ACE&nbsp;RACING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/tuning-wheels/adm.html"  style="color: darkgrey" >ADM</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/tuning-wheels/advan-racing.html"  style="color: darkgrey" >ADVAN&nbsp;RACING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/sports-suspensions/ap-sportfahrwerke/overview.html"  style="color: darkgrey" >AP&nbsp;SPORTFAHRWERKE</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/racing-wheels/arcasting.html"  style="color: darkgrey" >ARCASTING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/car-racing-parts/interior-exterior/atech.html"  style="color: darkgrey" >ATECH</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheel-parts/bimecc-wheel-parts.html"  style="color: darkgrey" >BIMECC</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/pit-lane/caseliner-pit-equipment.html"  style="color: darkgrey" >CASELINER</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/car-racing-parts/brakes/cl-brakes.html"  style="color: darkgrey" >CL&nbsp;BRAKES</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/car-racing-parts/brakes/ctf.html"  style="color: darkgrey" >C.T.F.</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/tuning-wheels/dlw.html"  style="color: darkgrey" >DLW</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/tuning-wheels/eta-beta.html"  style="color: darkgrey" >ETABETA</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/racing-wheels/evocorse.html"  style="color: darkgrey" >EVOCORSE</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/sports-exhausts/fox-exhaust-systems.html"  style="color: darkgrey" >FOX&nbsp;EXHAUST</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/tuning-wheels/gmp-italia.html"  style="color: darkgrey" >GMP&nbsp;ITALIA</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/sports-exhausts/inoxcar-racing.html"  style="color: darkgrey" >INOXCAR</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/sports-suspensions/kw-suspensions/overview.html"  style="color: darkgrey" >KW&nbsp;SUSPENSIONS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheel-parts/kics-2-pc-boltsnuts.html"  style="color: darkgrey" >KICS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/car-racing-parts/lighting/lazer.html"  style="color: darkgrey" >LAZER</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/tuning-wheels/leon-hardiritt.html"  style="color: darkgrey" >LEON&nbsp;HARDIRITT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/racing-protective-parts/steering-wheels/momo.html"  style="color: darkgrey" >MOMO</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/sports-suspensions/oehlins-coilovers.html"  style="color: darkgrey" >OEHLINS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/tuning-wheels/oz.html"  style="color: darkgrey" >O·Z&nbsp;RACING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/car-racing-parts/brakes/pagid-racing.html"  style="color: darkgrey" >PAGID</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/pit-lane/paoli-pitstop.html"  style="color: darkgrey" >PAOLI</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/sports-suspensions/powerflex.html"  style="color: darkgrey" >POWERFLEX</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheel-spacers/overview.html"  style="color: darkgrey" >POWERTECH</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/car-racing-parts/lighting/ring.html"  style="color: darkgrey" >RING</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/car-racing-parts/interior-exterior/sabelt.html"  style="color: darkgrey" >SABELT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/car-racing-parts/cooling-system-technology/samco-sport.html"  style="color: darkgrey" >SAMCO</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/tuning-wheels/schmidt.html"  style="color: darkgrey" >SCHMIDT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/car-racing-parts/cooling-system-technology/sfs-performance.html"  style="color: darkgrey" >SFS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/sports-suspensions/st-suspensions/overview.html"  style="color: darkgrey" >ST&nbsp;SUSPENSIONS</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/racing-protective-wear/fia-helmets/stilo.html"  style="color: darkgrey" >STILO</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/sports-exhausts/supersprint.html"  style="color: darkgrey" >SUPERSPRINT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/wheels/tuning-wheels/wedssport.html"  style="color: darkgrey" >WEDSSPORT</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/racing-tyres/advan-yokohama.html"  style="color: darkgrey" >YOKOHAMA</a>&nbsp;&nbsp;·&nbsp;
+<a href="/francais/products/car-racing-parts/transmissions.html"  style="color: darkgrey" >3MO PERFORMANCE</a>
+
+<?php
+}
+?>
+    
+</h5>
+
+</div>
+
+<br/>
+
+
+    
+<!-- ENDE MANUELLE FUSS BRANDS -->
+
+
+
+        </footer><!-- .footer -->
+        <footer class="row muted">
+            <div class="span12 text-center mdlinkcontainer">
+
+            	<a href="http://www.awt-werbung.ch" title="Webdesign - AWT Werbeagentur" alt="Webdesign - AWT Werbeagentur" class="mdlink hidden-phone"><span>Gestaltung &amp; Umsetzung</span> &nbsp;<img src="<?php echo rex::getServer() ?>media/img/logo_awt2013.png" alt="<?php print rex::getServerName() ?>"  width="47px" height="52px"/> &nbsp;<span>AWT Werbeagentur</span></a>
+
+            </div>
+        </footer><!-- .footer -->
+	</div><!-- .container -->
+
+    <script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  // carousel demo
+		  	$('#myCarousel').carousel()
+		  	$('#myCarousel0').carousel().carousel('pause')
+		  	$('#myCarousel1').carousel().carousel('pause')
+			$('#myCarousel2').carousel().carousel('pause')
+			$('#myCarousel3').carousel().carousel('pause')
+			$('#myCarousel4').carousel().carousel('pause')
+			$('#myCarousel5').carousel().carousel('pause')
+			$('#myCarouselNews').carousel()
+			$('#myCarouselLogos').carousel()
+			$('#myCarouselWerbung1').carousel()
+			$('#myCarouselWerbung2').carousel()
+			$('#myCarouselWerbung3').carousel()
+		})
+	  }(window.jQuery)
+
+	  $(document).ready(function() {
+		$("#myCarousel").swiperight(function() {
+		  	$("#myCarousel").carousel('prev');
+		});
+	   	$("#myCarousel").swipeleft(function() {
+		  	$("#myCarousel").carousel('next');
+	   	});
+		$("#myCarousel0").swiperight(function() {
+		  	$("#myCarousel0").carousel('prev');
+		});
+	   	$("#myCarousel0").swipeleft(function() {
+		  	$("#myCarousel0").carousel('next');
+	   	});
+		$("#myCarousel1").swiperight(function() {
+		  	$("#myCarousel1").carousel('prev');
+		});
+	   	$("#myCarousel1").swipeleft(function() {
+		  	$("#myCarousel1").carousel('next');
+	   	});
+		$("#myCarousel2").swiperight(function() {
+		  	$("#myCarousel2").carousel('prev');
+		});
+	   	$("#myCarousel2").swipeleft(function() {
+		  	$("#myCarousel2").carousel('next');
+	   	});
+		$("#myCarousel3").swiperight(function() {
+		  	$("#myCarousel3").carousel('prev');
+		});
+	   	$("#myCarousel3").swipeleft(function() {
+		  	$("#myCarousel3").carousel('next');
+	   	});
+		$("#myCarousel4").swiperight(function() {
+		  	$("#myCarousel4").carousel('prev');
+		});
+	   	$("#myCarousel4").swipeleft(function() {
+		  	$("#myCarousel4").carousel('next');
+	   	});
+		$("#myCarousel5").swiperight(function() {
+		  	$("#myCarousel5").carousel('prev');
+		});
+	   	$("#myCarousel5").swipeleft(function() {
+		  	$("#myCarousel5").carousel('next');
+	   	});
+		$("#myCarouselNews").swiperight(function() {
+		  	$("#myCarouselNews").carousel('prev');
+		});
+	   	$("#myCarouselNews").swipeleft(function() {
+		  	$("#myCarouselNews").carousel('next');
+	   	});
+	   	$("#myCarouselLogos").swiperight(function() {
+		  	$("#myCarouselLogos").carousel('prev');
+		});
+	   	$("#myCarouselLogos").swipeleft(function() {
+		  	$("#myCarouselLogos").carousel('next');
+	   	});
+	   	$("#myCarouselWerbung1").swiperight(function() {
+		  	$("#myCarouselWerbung1").carousel('prev');
+		});
+	   	$("#myCarouselWerbung1").swipeleft(function() {
+		  	$("#myCarouselWerbung1").carousel('next');
+	   	});
+	   	$("#myCarouselWerbung2").swiperight(function() {
+		  	$("#myCarouselWerbung2").carousel('prev');
+		});
+	   	$("#myCarouselWerbung2").swipeleft(function() {
+		  	$("#myCarouselWerbung2").carousel('next');
+	   	});
+	   	$("#myCarouselLogos").swiperight(function() {
+		  	$("#myCarouselWerbung3").carousel('prev');
+		});
+	   	$("#myCarouselWerbung3").swipeleft(function() {
+		  	$("#myCarouselWerbung3").carousel('next');
+	   	});
+		$('.fancybox').fancybox({
+				openEffect	: 'none',
+				closeEffect	: 'none'
+		});
+		$('a.popup').fancybox({
+			openEffect		:	'fade',
+			closeEffect		:	'fade',
+			openSpeed		:	600,
+			closeSpeed		:	200,
+			maxWidth		: 	800,
+			maxHeight		: 	450,
+			fitToView		: 	false,
+			autoSize		: 	true
+		});
+                $('a.video-popup').fancybox({
+                        type                    :       'iframe',
+			openEffect		:	'fade',
+			closeEffect		:	'fade',
+			openSpeed		:	600,
+			closeSpeed		:	200,
+			maxWidth		: 	800,
+			maxHeight		: 	458,
+			fitToView		: 	false,
+			autoSize		: 	false
+		});
+
+		var count = $(".accordion > div").size();
+		if(count == 1) {
+			$(".accordion-body").collapse('show');
+		}
+
+                $('a:not(.popup,.video-popup)').each(function() {
+                    var a = new RegExp('/' + window.location.host + '/');
+                    if(this.href) {
+                        if(!a.test(this.href)) {
+                            $(this).click(function(event) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                                window.open(this.href, '_blank');
+                            });
+                        }
+                    }
+                });
+	  });
+
+    <?php
+    if(rex_clang::getCurrentId() == "0") {
+      // Italienisch
+      $tawktoId = '1buiuc62k';
+    } elseif (rex_clang::getCurrentId() == "2") {
+      // Französisch
+      $tawktoId = '1c1al9g8u';
+    } else {
+      // Deutsch
+      $tawktoId = 'default';
+    }
+    ?>
+
+    </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/59ddfcc14854b82732ff4e93/<?php echo $tawktoId ?>';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+</body>
+</html>

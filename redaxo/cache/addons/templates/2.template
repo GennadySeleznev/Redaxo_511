@@ -1,0 +1,109 @@
+<?php
+
+$PATH = explode("|", $this->getValue("path") . $this->getValue("article_id") . "|");
+
+echo '<ul class="nav pull-right nav-pills">';
+foreach (rex_category::getRootCategories() as $lev1) {
+    if ($lev1->isOnline() == 1) {
+        if ($lev1->getValue("cat_link") != "") {
+            $link = $lev1->getValue("cat_link");
+        } else {
+            $link = $lev1->getUrl();
+        }
+
+        if (count($lev1->getChildren()) > 0) {
+            if ($lev1->getId() == $PATH[1])
+                echo '<li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="' . $link . '">' . $lev1->getName() . ' <b class="caret"></b></a>';
+            else
+                echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="' . $link . '">' . $lev1->getName() . ' <b class="caret"></b></a>';
+        } else {
+
+            if ($lev1->getId() == $PATH[1])
+                echo '<li class="active"><a href="' . $link . '">' . $lev1->getName() . '</a>';
+            else
+                echo '<li><a href="' . $link . '">' . $lev1->getName() . '</a>';
+        }
+        if (count($lev1->getChildren()) > 0) {
+            echo '<ul class="dropdown-menu">';
+            foreach ($lev1->getChildren() as $lev2) {
+                if ($lev2->isOnline() == 1) {
+                    if ($lev2->getValue("cat_link") != "") {
+                        $link2 = $lev2->getValue("cat_link");
+                    } else {
+                        $link2 = $lev2->getUrl();
+                    }
+                    if (count($lev2->getChildren()) > 0) {
+                        if ($lev2->getId() == $PATH[2])
+                            echo '<li class="active dropdown-submenu"><a href="' . $link2 . '">' . $lev2->getName() . '</a>';
+                        else
+                            echo '<li class="dropdown-submenu"><a href="' . $link2 . '">' . $lev2->getName() . '</a>';
+                    } else {
+                        if ($lev2->getId() == $PATH[2])
+                            echo '<li class="active"><a href="' . $link2 . '">' . $lev2->getName() . '</a>';
+                        else
+                            echo '<li><a href="' . $link2 . '">' . $lev2->getName() . '</a>';
+                    }
+                    if (count($lev2->getChildren()) > 0) {
+                        echo '<ul class="dropdown-menu">';
+                        foreach ($lev2->getChildren() as $lev3) {
+                            if ($lev3->isOnline() == 1) {
+                                if ($lev3->getValue("cat_link") != "") {
+                                    $link3 = $lev3->getValue("cat_link");
+                                } else {
+                                    $link3 = $lev3->getUrl();
+                                }
+                                if (count($lev3->getChildren()) > 0) {
+                                if ($lev3->getId() == $PATH[3])
+                                    
+                                 echo '<li class="active dropdown-submenu"><a href="' . $link3 . '">' . $lev3->getName() . '</a>';
+                        else
+                            echo '<li class="dropdown-submenu"><a href="' . $link3 . '">' . $lev3->getName() . '</a>';
+                                  } else {
+                        if ($lev3->getId() == $PATH[3])
+                            echo '<li class="active"><a href="' . $link3 . '">' . $lev3->getName() . '</a>';
+                        else
+                            echo '<li><a href="' . $link3 . '">' . $lev3->getName() . '</a>';
+                    }
+                    
+                       if (count($lev3->getChildren()) > 0) {
+                        echo '<ul class="dropdown-menu">';
+                        foreach ($lev3->getChildren() as $lev4) {
+                            if ($lev4->isOnline() == 1) {
+                                if ($lev4->getValue("cat_link") != "") {
+                                    $link4 = $lev4->getValue("cat_link");
+                                } else {
+                                    $link4 = $lev4->getUrl();
+                                }
+                                if ($lev4->getId() == $PATH[4])
+                                    echo '<li class="active"><a href="' . $link4 . '">' . $lev4->getName() . '</a>';
+                                else
+                                    echo '<li><a href="' . $link4 . '">' . $lev4->getName() . '</a>';
+
+                                echo '</li>';
+                            }
+                        }
+                        echo '</ul>';
+                    }
+
+                                echo '</li>';
+                            }
+                        }
+                        echo '</ul>';
+                    }
+                    echo '</li>';
+                }
+            }
+            echo '</ul>';
+        }
+        echo '</li>';
+    }
+}
+?>
+
+
+<?php
+
+echo '</ul>';
+?>
+
+
